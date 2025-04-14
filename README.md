@@ -17,7 +17,7 @@ If you want to build from source, run following commands:
 ```bash
 git clone ...
 cd paramscope
-mvn package clean
+mvn clean package
 ```
 
 The executable jar file `'ParamScope-x.x-SNAPSHOT-jar-with-dependencies.jar'` will be generated in 'target/' directory.
@@ -43,7 +43,7 @@ java -jar ParamScope-x.x-SNAPSHOT-jar-with-dependencies.jar -jar <path_to_jar_fi
 
 #### Analyse android apks
 ```bash
-java -jar ParamScope-x.x-SNAPSHOT-jar-with-dependencies.jar -apk <path_to_apk_file> ( -androidJar | -aj ) <path_to_android.jar_file(without stub)>
+java -jar ParamScope-x.x-SNAPSHOT-jar-with-dependencies.jar -apk <path_to_apk_file> ( -androidJar | -aj ) <path_to_android.jar_file (without stub)>
 ```
 
 Note: When analyzing Android applications, the -androidJar/-aj option is required. You must specify a non-stub android.jar file that includes concrete implementations. It is recommended to use the `android-all-15-robolectric-12650502.jar` file located in the project directory. The jar can also be downloaded from [Google Android All Library](https://mvnrepository.com/artifact/org.robolectric/android-all).
